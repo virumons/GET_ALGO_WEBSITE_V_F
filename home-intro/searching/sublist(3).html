@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sublist Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--Sublist Search-->
+        <section class="content">
+            <div class="container">
+                <h4> Search</h4>
+                <h2>Sublist Search</h2>
+                <p>
+                We are given two linked lists, and our task is to determine whether the second list (sublist) is present or not in the first list (list) in the same order.
+
+If the second list is present in the first list in the same order, return true.
+Else if the second list is not present in the first list, return false. 
+                </p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=14_vHHmFPKVfg1XTCIdx2Mf9S92wXl7Oz"></li>
+                </ul>
+            </div>
+        </section>
+
+        
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Sublist Search</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+   // C# program to find a list in second list
+using System;
+ 
+class GFG
+{
+ 
+// A Linked List node
+class Node
+{
+    public int data;
+    public Node next;
+};
+ 
+// Returns true if first list is
+// present in second list
+static Boolean findList(Node first,
+                        Node second)
+{
+    Node ptr1 = first, ptr2 = second;
+ 
+    // If both linked lists are empty,
+    // return true
+    if (first == null && second == null)
+        return true;
+ 
+    // Else If one is empty and
+    // other is not, return false
+    if (first == null ||
+       (first != null && second == null))
+        return false;
+ 
+    // Traverse the second list by
+    // picking nodes one by one
+    while (second != null)
+    {
+        // Initialize ptr2 with
+        // current node of second
+        ptr2 = second;
+ 
+        // Start matching first list
+        // with second list
+        while (ptr1 != null)
+        {
+            // If second list becomes empty and
+            // first not then return false
+            if (ptr2 == null)
+                return false;
+ 
+            // If data part is same, go to next
+            // of both lists
+            else if (ptr1.data == ptr2.data)
+            {
+                ptr1 = ptr1.next;
+                ptr2 = ptr2.next;
+            }
+ 
+            // If not equal then break the loop
+            else break;
+        }
+ 
+        // Return true if first list gets traversed
+        // completely that means it is matched.
+        if (ptr1 == null)
+            return true;
+ 
+        // Initialize ptr1 with first again
+        ptr1 = first;
+ 
+        // And go to next node of second list
+        second = second.next;
+    }
+    return false;
+}
+ 
+/* Function to print nodes
+in a given linked list */
+static void printList(Node node)
+{
+    while (node != null)
+    {
+        Console.Write("{0} ", node.data);
+        node = node.next;
+    }
+}
+ 
+// Function to add new node to linked lists
+static Node newNode(int key)
+{
+    Node temp = new Node();
+    temp.data= key;
+    temp.next = null;
+    return temp;
+}
+ 
+// Driver Code
+public static void Main(String[] args)
+{
+    /* Let us create two linked lists to test
+    the above functions. Created lists shall be
+        a: 1->2->3->4
+        b: 1->2->1->2->3->4*/
+    Node a = newNode(1);
+    a.next = newNode(2);
+    a.next.next = newNode(3);
+    a.next.next.next = newNode(4);
+ 
+    Node b = newNode(1);
+    b.next = newNode(2);
+    b.next.next = newNode(1);
+    b.next.next.next = newNode(2);
+    b.next.next.next.next = newNode(3);
+    b.next.next.next.next.next = newNode(4);
+ 
+    if(findList(a, b) == true)
+        Console.Write("LIST FOUND");
+    else
+        Console.Write("LIST NOT FOUND");
+}
+}      
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+    public class Bubble {  
+        static void print (int a[]) //function to print array elements  
+        {  
+            int n = a.length;  
+            int i;  
+            for (i = 0; i < n; i++)  
+            {  
+                System.out.print(a[i] + " ");  
+            }         
+        }  
+        static void bubbleSort (int a[])    // function to implement bubble sort  
+        {  
+            int n = a.length;  
+            int i, j, temp;  
+            for (i = 0; i < n; i++)  
+            {  
+                for (j = i + 1; j < n; j++)  
+                {  
+                    if (a[j] < a[i])  
+                    {  
+                        temp = a[i];  
+                        a[i] = a[j];  
+                        a[j] = temp;  
+                    }  
+                }  
+            }  
+        }  
+        public static void main(String[] args) {    
+        int a[] = {35, 10, 31, 11, 26};    
+        Bubble b1 = new Bubble();  
+        System.out.println("Before sorting array elements are - ");    
+        b1.print(a);  
+        b1.bubbleSort(a);  
+        System.out.println();  
+        System.out.println("After sorting array elements are - ");    
+        b1.print(a);  
+            
+    }    
+    }  
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+   # Python3 program to find a list in second list
+class Node:
+    def __init__(self, value = 0):
+         
+        self.value = value
+        self.next = None
+ 
+# Returns true if first list is
+# present in second list
+def findList(first, second):
+     
+    # If both linked lists are empty/None,
+    # return True
+    if not first and not second:
+        return True
+ 
+    # If ONLY one of them is empty,
+    # return False
+    if not first or not second:
+        return False
+ 
+    ptr1 = first
+    ptr2 = second
+ 
+    # Traverse the second LL by
+    # picking nodes one by one
+    while ptr2:
+ 
+        # Initialize 'ptr2' with current
+        # node of 'second'
+        ptr2 = second
+ 
+        # Start matching first LL
+        # with second LL
+        while ptr1:
+ 
+            # If second LL become empty and
+            # first not, return False,
+            # since first LL has not been
+            # traversed completely
+            if not ptr2:
+                return False
+ 
+            # If value of both nodes from both
+            # LLs are equal, increment pointers
+            # for both LLs so that next value
+            # can be matched
+            else if ptr1.value == ptr2.value:
+                ptr1 = ptr1.next
+                ptr2 = ptr2.next
+ 
+            # If a single mismatch is found
+            # OR ptr1 is None/empty,break out
+            # of the while loop and do some checks
+            else:
+                break
+ 
+        # check 1 :
+        # If 'ptr1' is None/empty,that means
+        # the 'first LL' has been completely
+        # traversed and matched so return True
+        if not ptr1:
+            return True
+ 
+        # If check 1 fails, that means, some
+        # items for 'first' LL are still yet
+        # to be matched, so start again by
+        # bringing back the 'ptr1' to point
+        # to 1st node of 'first' LL
+        ptr1 = first
+         
+        # And increment second node element to next
+        second = second.next
+         
+    return False
+ 
+# Driver Code
+ 
+# Let us create two linked lists to
+# test the above functions.
+# Created lists would be be
+# node_a: 1->2->3->4
+# node_b: 1->2->1->2->3->4
+node_a = Node(1)
+node_a.next = Node(2)
+node_a.next.next = Node(3)
+node_a.next.next.next = Node(4)
+ 
+node_b = Node(1)
+node_b.next = Node(2)
+node_b.next.next = Node(1)
+node_b.next.next.next = Node(2)
+node_b.next.next.next.next = Node(3)
+node_b.next.next.next.next.next = Node(4)
+ 
+if findList(node_a, node_b):
+    print("LIST FOUND")
+else:
+    print("LIST NOT FOUND")
+
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Input  : list1 =  1->2->3->4
+         list2  = 1->2->1->2->3->4</h4>
+                <code>Output : LIST FOUND
+ </code>
+                <h4>Input  : list1 =  1->2->3->4
+         list2  = 1->2->2->1->2->3</h4>
+                <code> Output : LIST NOT FOUND  </code>
+            </div>
+            
+        </section>
+  
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="#">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="700px" height="600px" src="https://www.youtube.com/embed/o8f5jgSkst0"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="linearsearch(6).html">previous</a>
+                <p>Linear Search</p>
+            </div>
+            <div class="next">
+                <a href="jump(8).html">Next</a>
+                <p>Jump Search</p>
+            </div>
+        </section>
+        <script>
+
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+  
+              for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                  } else {
+                  dropdownContent.style.display = "block";
+                  }
+              });
+              }
+              </script>
+    </body>
+</html>

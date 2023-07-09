@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Heap Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--heap sort-->
+        <section class="content">
+            <div class="container">
+                <h4>Sorts</h4>
+                <h2>Heap Sort</h2>
+                <p>
+                <span id="al">Heap sort</span> Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the minimum element and place the minimum element at the beginning. We repeat the same process for the remaining elements.
+The process of reshaping a binary tree into a Heap data structure is known as heapify. A binary tree is a tree data structure that has two child nodes at max. If a nodes children nodes are heapified, then only heapify process can be applied over that node. A heap should always be a complete binary tree. 
+Starting from a complete binary tree, we can modify it to become a Max-Heap by running a function called heapify on all the non-leaf elements of the heap. i.e. heapify uses recursion.
+
+
+                </p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://i.stack.imgur.com/rxRGq.png"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="algorithms">
+            
+            <div class="algorithm">
+                <h2>Algorithm -<span id="al" style="font-weight:500 ;"> Heap sort</span></h2>
+                   <pre>
+                       <code>
+ Algorithm heap sort [A (0..n-1)]
+<span id="comment"> 
+    // Sort a given array by heap sort.
+    // Input : An array A(0,n-1) of orderable elements.
+    // Output : Array A [0,n-1] sorted in non- decreasing order .</span>
+    <span id="code">
+       heapify(array)
+   Root = array[0]
+   Largest =largest( array[0] ,array [2 *0 + 1]. array[2 * 0 + 2])
+   if(Root != Largest)
+       Swap(Root, Largest)
+</span>                                                     
+                    </code>         
+                </pre>                     
+            </div>
+        </section>
+        <!--Algorithms ends-->
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Heap sort</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+#include < stdio.h >
+
+void swap(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void heapify(int arr[], int n, int i)
+{
+    int left, right, largest;
+    largest = i;
+    left = 2 * i + 1;
+    right = 2 * i + 2;
+
+    // Check if left child exists and is larger than its parent
+    if (left < n && arr[left] > arr[largest])
+        largest = left;
+    // Check if right child exists and larger than its parent
+    if (right < n && arr[right] > arr[largest])
+        largest = right;
+
+    // if root is not the largest
+    if (largest != i) {
+        swap(&arr[i], &arr[largest]); //make root the largest
+        heapify(arr, n, largest); // Apply heapify to the largest node
+    }
+}
+
+void heap_sort(int arr[], int n)
+{
+    int i;
+    for (i = (n / 2) - 1; i >= 0; i--)
+        heapify(arr, n, i);
+
+    for (i = n - 1; i >= 0; i--) {
+        swap(&arr[0], &arr[i]); //Move the largest element at root to the end
+        heapify(arr, i, 0); //Apply heapify to reduced heap
+    }
+}
+
+int main()
+{
+    int arr[] = { 20, 13, 34, 56, 12, 10 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Array:\n");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+        
+    heap_sort(arr, n);
+
+    printf("\nAfter performing Heap Sort:\n");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    return 0;
+}
+       
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+   import java.util.Scanner;
+
+public class HeapSort{    
+	private static int N;
+    public static void sort(int arr[]){       
+		heapMethod(arr);        
+        for (int i = N; i > 0; i--){
+            swap(arr,0, i);
+            N = N-1;
+            heap(arr, 0);
+        }
+    }     
+    public static void heapMethod(int arr[]){
+        N = arr.length-1;
+        for (int i = N/2; i >= 0; i--)
+            heap(arr, i);        
+    }
+    public static void heap(int arr[], int i){ 
+        int left = 2*i ;
+        int right = 2*i + 1;
+        int max = i;
+        if (left <= N && arr[left] > arr[i])
+            max = left;
+		if (right <= N && arr[right] > arr[max])        
+            max = right;
+        if (max != i){
+            swap(arr, i, max);
+            heap(arr, max);
+        }
+    }    
+    public static void swap(int arr[], int i, int j){
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp; 
+    }    
+    public static void main(String[] args) {
+        Scanner in = new Scanner( System.in );        
+        int n;    
+        System.out.println("Enter the number of elements to be sorted:");
+        n = in.nextInt();    
+        int arr[] = new int[ n ];
+        System.out.println("Enter "+ n +" integer elements");
+        for (int i = 0; i < n; i++)
+            arr[i] = in.nextInt();
+        sort(arr);
+        System.out.println("After sorting ");        
+        for (int i = 0; i < n; i++)
+            System.out.println(arr[i]+" ");            
+        System.out.println();            
+    }    
+}
+
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+   # heapify
+def heapify(arr, n, i):
+   largest = i # largest value
+   l = 2 * i + 1 # left
+   r = 2 * i + 2 # right
+   # if left child exists
+   if l < n and arr[i] < arr[l]:
+      largest = l
+   # if right child exits
+   if r < n and arr[largest] < arr[r]:
+      largest = r
+   # root
+   if largest != i:
+      arr[i],arr[largest] = arr[largest],arr[i] # swap
+      # root.
+      heapify(arr, n, largest)
+# sort
+def heapSort(arr):
+   n = len(arr)
+   # maxheap
+   for i in range(n, -1, -1):
+      heapify(arr, n, i)
+   # element extraction
+   for i in range(n-1, 0, -1):
+      arr[i], arr[0] = arr[0], arr[i] # swap
+      heapify(arr, i, 0)
+# main
+arr = [2,5,3,8,6,5,4,7]
+heapSort(arr)
+n = len(arr)
+print ("Sorted array is")
+for i in range(n):
+   print (arr[i],end=" ")
+
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Before sorting array</h4>
+                <code> 4 3 6 2 5 8 5 7 </code>
+                <h4>Sorted array is</h4>
+                <code> 2 3 4 5 5 6 7 8 </code>
+            </div>
+            
+        </section>
+        <!--Time complexity-->
+        <section class="time">
+            <h3>Time Complexity </h3>
+            <div class="times">
+                <p>best case, average case, worst case</p>
+                <img src="http://drive.google.com/uc?export=view&id=1OnCdcLyP2K4Ffwj7RUcA7sD56DehU4X0">
+            </div>
+        </section>
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="http://drive.google.com/uc?export=view&id=1WrMFNb6JGpCMNQz_TOJlzpGhchriBy7R">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/brute-force/heapsort">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="700px" height="500px" src="https://youtube.com/embed/MtQL_ll5KhQ"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="3countsort.html">previous</a>
+                <p>Count sort</p>
+            </div>
+            <div class="next">
+                <a href="5insertionsort.html">Next</a>
+                <p>Insertion sort</p>
+            </div>
+        </section>
+        <script>
+           
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+            </script>
+    </body>
+</html>

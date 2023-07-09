@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bucket Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--counting sort-->
+        <section class="content">
+            <div class="container">
+                <h4>Sorts</h4>
+                <h2>Bucket Sort</h2>
+                <p>
+                <span id="al">Bucket sort</span> is a sorting algorithm that separate the elements into multiple groups said to be buckets. Elements in bucket sort are first uniformly divided into groups called buckets, and then they are sorted by any other sorting algorithm. After that, elements are gathered in a sorted manner.The data items in the bucket sort are distributed in the form of buckets. In coding or technical interviews for software engineers, sorting algorithms are widely asked.</p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=196Cj6hpO4l7LyCYxTtsNaE8cWtrCzC98"
+                        style="width: 40pc; height: 20pc"></li>                  
+                </ul>
+            </div>
+        </section>
+
+        <section class="algorithms">
+            
+            <div class="algorithm">
+                <h2>Algorithm -<span id="al" style="font-weight:500 ;"> Bucket sort</span></h2>
+                   <pre>
+                       <code>
+ Algorithm Bucketsort [A (0..n-1)]
+<span id="comment"> 
+    // Sort a given array by Counting sort.
+    // Input : An array A(0,n-1) of orderable elements.
+    // Output : Array A [0,n-1] sorted in non- decreasing order .</span>
+    <span id="code">
+      void bucketSort(float[] a,int n)
+
+      {
+      
+          for(each floating integer 'x' in n)
+      
+          {
+              insert x into bucket[n*x]; 
+          }
+      
+          for(each bucket)
+      
+          {
+              sort(bucket);
+          }
+      
+      }
+      
+
+</span>                                                     
+                    </code>         
+                </pre>                     
+            </div>
+        </section>
+        <!--Algorithms ends-->
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Bucket sort</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+    #include < stdio.h>  
+    int getMax(int a[], int n) // function to get maximum element from the given array  
+    {  
+        int max = a[0];  
+        for (int i = 1; i < n; i++)  
+          if (a[i] > max)  
+            max = a[i];  
+        return max;  
+      }  
+      void bucket(int a[], int n) // function to implement bucket sort  
+      {  
+        int max = getMax(a, n); //max is the maximum element of array  
+        int bucket[max], i;  
+        for (int i = 0; i <= max; i++)  
+        {  
+          bucket[i] = 0;  
+        }  
+        for (int i = 0; i < n; i++)  
+        {  
+          bucket[a[i]]++;  
+        }  
+        for (int i = 0, j = 0; i <= max; i++)  
+        {  
+          while (bucket[i] > 0)  
+          {  
+            a[j++] = i;  
+            bucket[i]--;  
+          }  
+        }  
+      }  
+      void printArr(int a[], int n) // function to print array elements  
+      {  
+        for (int i = 0; i < n; ++i)  
+          printf("%d  ", a[i]);  
+      }  
+      int main()  
+      {  
+        int a[] = {54, 12, 84, 57, 69, 41, 9, 5};  
+        int n = sizeof(a) / sizeof(a[0]); // n is the size of array  
+        printf("Before sorting array elements are - \n");  
+        printArr(a, n);  
+        bucket(a, n);  
+        printf("\nAfter sorting array elements are - \n");  
+        printArr(a, n);  
+      }                                                    
+                            
+
+       
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+public class Bucket  
+{  
+    int getMax(int a[]) // function to get maximum element from the given   
+  
+array  
+{  
+    int n = a.length;  
+    int max = a[0];  
+    for (int i = 1; i < n; i++)  
+    if (a[i] > max)  
+    max = a[i];  
+    return max;  
+}  
+void bucket(int a[]) // function to implement bucket sort  
+{  
+    int n = a.length;  
+    int max = getMax(a); //max is the maximum element of array  
+    int bucket[] = new int[max+1];   
+    for (int i = 0; i <= max; i++)  
+    {  
+        bucket[i] = 0;  
+    }  
+    for (int i = 0; i < n; i++)  
+    {  
+        bucket[a[i]]++;  
+          
+    }  
+    for (int i = 0, j = 0; i <= max; i++)  
+    {  
+        while (bucket[i] > 0)  
+        {  
+            a[j++] = i;  
+            bucket[i]--;  
+        }  
+    }  
+}  
+void printArr(int a[]) /* function to print the array */  
+{  
+    int i;  
+    int n = a.length;  
+    for (i = 0; i < n; i++)  
+    System.out.print(a[i] + " ");  
+}  
+  
+    public static void main(String[] args) {  
+    int a[] = { 90, 40, 5, 15, 30, 9 };  
+    Bucket b1 = new Bucket();  
+    System.out.print("Before sorting array elements are - \n");  
+    b1.printArr(a);  
+    b1.bucket(a);  
+    System.out.print("\nAfter sorting array elements are - \n");  
+    b1.printArr(a);  
+    }                           
+                          
+
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+max_value = max(input_list)
+size = max_value/len(input_list)
+buckets_list= []
+for x in range(len(input_list)):
+buckets_list.append([]) 
+                      
+for i in range(len(input_list)):
+j = int (input_list[i] / size)
+if j != len (input_list):
+    buckets_list[j].append(input_list[i])
+else:
+    buckets_list[len(input_list) - 1].append(input_list[i])
+
+for z in range(len(input_list)):
+insertion_sort(buckets_list[z])
+     
+final_output = []
+for x in range(len (input_list)):
+final_output = final_output + buckets_list[x]
+return final_output
+
+def insertion_sort(bucket):
+for i in range (1, len (bucket)):
+var = bucket[i]
+j = i - 1
+while (j >= 0 and var < bucket[j]):
+    bucket[j + 1] = bucket[j]
+    j = j - 1
+bucket[j + 1] = var
+
+def main():
+input_list = [1.20, 0.22, 0.43, 0.36,0.39,0.27]
+print('ORIGINAL LIST:')
+print(input_list)
+sorted_list = bucket_sort(input_list)
+print('SORTED LIST:')
+print(sorted_list)-                                                                                                              
+                      
+
+
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Before sorting array</h4>
+                <code>2 3 1 8 3 4</code>
+                <h4>Sorted array is</h4>
+                <code>1 2 2 3 3 4 8 </code>
+            </div>
+            
+        </section>
+        <!--Time complexity-->
+        <section class="time">
+            <h3>Time Complexity </h3>
+            <div class="times">
+                <img src="http://drive.google.com/uc?export=view&id=1aiWS8mV8J263HhFsex4mX7U8sH3jSqLK" height="400px" width="700px">
+            </div>
+        </section>
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="http://drive.google.com/uc?export=view&id=1dUrIgVClFDfFlFTtGEQC8aSCDEMwMlU7">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="700px" height="500px" src="https://youtube.com/embed/geVyIsFpxUs"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="1bubble.html">previous</a>
+                <p>Bubble sort</p>
+            </div>
+            <div class="next">
+                <a href="3countsort.html">Next</a>
+                <p>Counting  sort</p>
+            </div>
+        </section>
+        <script>
+           
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+            </script>
+    </body>
+</html>

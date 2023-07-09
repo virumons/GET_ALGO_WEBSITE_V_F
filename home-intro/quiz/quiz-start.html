@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz-content.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+</head>
+<body id="body">
+    <section class="navi">
+        <a href="../landing page/index2.html" style="float: left; position:absolute; left:1%;">Back</a>
+        <h5 style="font-weight: 600;">GET-ALGO</h5>
+    </section>
+    
+    <div class="quiz">
+        <img src="rectangle.png" id="cone">
+        <div class="quiz-content">
+            <h1>Quiz</h1>
+            <h5 style="margin: 0%;">Available quiz</h5>
+            <p>"Click anyone to start"</p>
+            <div class="categories">
+                <img src="http://drive.google.com/uc?export=view&id=12MVJAu6A411IzIr1ZHRfdpeO8JkbhBFg"/><a href="searchquiz.html">  Searching</a> 
+            <img src="http://drive.google.com/uc?export=view&id=138nKRcD6FTk-rcucup9HfiX52aakr3CZ"/><a href="sortquiz.html">Sorting</a>
+            </div>
+        </div>
+        <img src="cone.png" id="cyclic">
+    </div>
+</body>
+
+<script>
+VANTA.HALO({
+  el: "#body",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  backgroundColor: 0x1d1f27
+})
+</script>
+</html>

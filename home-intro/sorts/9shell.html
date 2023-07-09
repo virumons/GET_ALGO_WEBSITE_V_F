@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shell Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--shell sort-->
+        <section class="content">
+            <div class="container">
+                <h4>sort</h4>
+                <h2>Shell Sort</h2>
+                <p>
+                <span id="al">Shell sort</span>Shell sort is a generalized version of the insertion sort algorithm.
+ It first sorts elements that are far apart from each other and successively reduces the interval between the elements to be sorted.
+                </p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=1SqwDdaxk7q6hm1IyHmMx8whO4TX2TRUf"
+                        style="height: 20pc; width: 40pc;"></li>
+                    </ul>
+            </div>
+        </section>
+
+        <section class="algorithms">
+            
+            <div class="algorithm">
+                <h2>Algorithm -<span id="al" style="font-weight:500 ;"> Shell sort</span></h2>
+                   <pre>
+                       <code>
+ Algorithm Shellsort [A (0..n-1)]
+<span id="comment"> 
+    // Sort a given array by Shell sort.
+    // Input : An array A(0�n-1) of orderable elements.
+    // Output : Array A [0�n-1] sorted in non- decreasing order .</span>
+    <span id="code">
+ shellSort(array, size)
+  for interval i <- size/2n down to 1
+    for each interval "i" in array
+        sort all the elements at interval "i"
+end shellSort
+
+</span>                                                     
+                    </code>         
+                </pre>                     
+            </div>
+        </section>
+        <!--Algorithms ends-->
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Shell sort</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+#include < stdio.h >
+#include < stdbool.h >
+#define MAX 7
+int intArray[MAX] = {4,6,3,2,1,9,7};
+void printline(int count) {
+   int i
+   for(i = 0;i < count-1;i++) {
+      printf("=");
+   }	
+   printf("=\n");
+}
+void display() {
+   int i;
+   printf("[");	
+   // navigate through all items 
+   for(i = 0;i < MAX;i++) {
+      printf("%d ",intArray[i]);
+   }	
+   printf("]\n");
+}
+void shellSort() {
+   int inner, outer;
+   int valueToInsert;
+   int interval = 1;   
+   int elements = MAX;
+   int i = 0;
+   while(interval <= elements/3) {
+      interval = interval*3 +1;
+   }
+    while(interval > 0) {
+      printf("iteration %d#:",i); 
+      display();      
+      for(outer = interval; outer < elements; outer++) {
+         valueToInsert = intArray[outer];
+         inner = outer;			
+         while(inner > interval -1 && intArray[inner - interval] 
+            >= valueToInsert) {
+            intArray[inner] = intArray[inner - interval];
+            inner -=interval;
+            printf(" item moved :%d\n",intArray[inner]);
+         }  
+         intArray[inner] = valueToInsert;
+         printf(" item inserted :%d, at position :%d\n",valueToInsert,inner);
+      }		
+      interval = (interval -1) /3;
+      i++;
+   }          
+}
+int main() {
+   printf("Input Array: ");
+   display();
+   printline(50);
+   shellSort();
+   printf("Output Array: ");
+   display();
+   printline(50);
+   return 1;
+}
+
+
+       
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+public class Demo {
+   int shell_sort(int my_arr[]) {
+      int arr_len = my_arr.length;
+      for (int gap = arr_len / 2; gap > 0; gap /= 2) {
+         for (int i = gap; i < arr_len; i += 1) {
+            int temp = my_arr[i];
+            int j;
+            for (j = i; j >= gap && my_arr[j - gap] > temp; j -= gap)
+            my_arr[j] = my_arr[j - gap];
+            my_arr[j] = temp;
+         }
+      }
+      return 0;
+   }
+   public static void main(String args[]) {
+      int my_arr[] = { 12, 34, 54, 2, 3 };
+      Demo my_instance = new Demo();
+      my_instance.shell_sort(my_arr);
+      System.out.println("The array, after performing shell sort is : ");
+      int arr_len = my_arr.length;
+      for (int i = 0; i < arr_len; ++i)
+      System.out.print(my_arr[i] + " ");
+      System.out.println();
+   }
+}
+
+
+
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+def shell_sort(my_list, list_len):
+   interval = list_len // 2
+   while interval > 0:
+      for i in range(interval, list_len):
+         temp = my_list[i]
+         j = i
+         while j >= interval and my_list[j - interval] > temp:
+            my_list[j] = my_list[j - interval]
+            j -= interval
+         my_list[j] = temp
+      interval //= 2
+
+my_list = [ 45, 31, 62, 12, 89, 5, 9, 8]
+list_len = len(my_list)
+print ("The list before sorting is :")
+print(my_list)
+shell_sort(my_list, list_len)
+print ("\nThe list after performing shell sorting is :")
+print(my_list)
+</code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Before sorting array</h4>
+                <code>45  31  62  12  89  5  9  8</code>
+                <h4>Sorted array is</h4>
+                <code>5  8  9  12  31  45  62  89</code>
+            </div>
+            
+        </section>
+        <!--Time complexity-->
+        <section class="time">
+            <h3>Time Complexity </h3>
+            <div class="times">
+                <img src="http://drive.google.com/uc?export=view&id=15oIZUflsAAcfuKGZ1DxnK5y7wvdKWIZ3">
+            </div>
+        </section>
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="https://s3.tproger.ru/uploads/2017/09/Shell-sort.gif">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="600px" height="500px" src="https://youtube.com/embed/SHcPqUe2GZM"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="8selectionsort.html">Previous</a>
+                <p>Selection Sort</p>
+            </div>
+            <div class="next">
+                <a href="10quick.html">Next</a>
+                <p>Quick Sort</p>
+            </div>
+        </section>
+        <script>
+           
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+            </script>
+    </body>
+</html>

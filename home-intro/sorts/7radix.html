@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Radix Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--radix sort-->
+        <section class="content">
+            <div class="container">
+                <h4>sort</h4>
+                <h2>Radix Sort</h2>
+                <p>
+                <span id="al">Radix sort</span>Radix sort is a sorting algorithm that sorts the elements by first grouping the individual digits of the same place value. 
+Then, sort the elements according to their increasing/decreasing order.
+                </p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=1c0lBZ6D32cjOKmqYKKvFhNSJmS_wyE8o"
+                        style="height: 20pc; width: 40pc;"></li>
+                    </ul>
+            </div>
+        </section>
+
+        <section class="algorithms">
+            
+            <div class="algorithm">
+                <h2>Algorithm -<span id="al" style="font-weight:500 ;"> Radix sort</span></h2>
+                   <pre>
+                       <code>
+ Algorithm Radixsort [A (0..n-1)]
+<span id="comment"> 
+    // Sort a given array by radix sort.
+    // Input : An array A(0,n-1) of orderable elements.
+    // Output : Array A [0,n-1] sorted in non- decreasing order .</span>
+    <span id="code">
+ radixSort(array)
+  d <- maximum number of digits in the largest element
+  create d buckets of size 0-9
+  for i <- 0 to d
+    sort the elements according to ith place digits using countingSort
+ 
+countingSort(array, d)
+  max <- find largest element among dth place elements
+  initialize count array with all zeros
+  for j <- 0 to size
+    find the total count of each unique digit in dth place of elements and
+    store the count at jth index in count array
+  for i <- 1 to max
+    find the cumulative sum and store it in count array itself
+  for j <- size down to 1
+    restore the elements to array
+decrease count of each element restored by 1
+
+
+</span>                                                     
+                    </code>         
+                </pre>                     
+            </div>
+        </section>
+        <!--Algorithms ends-->
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Radix sort</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+#include<stdio.h>
+int get_max (int a[], int n){
+   int max = a[0];
+   for (int i = 1; i < n; i++)
+      if (a[i] > max)
+         max = a[i];
+   return max;
+}
+void radix_sort (int a[], int n){
+   int bucket[10][10], bucket_cnt[10];
+   int i, j, k, r, NOP = 0, divisor = 1, lar, pass;
+   lar = get_max (a, n);
+   while (lar > 0){
+      NOP++;
+      lar /= 10;
+   }
+   for (pass = 0; pass < NOP; pass++){
+      for (i = 0; i < 10; i++){
+         bucket_cnt[i] = 0;
+      }
+      for (i = 0; i < n; i++){
+         r = (a[i] / divisor) % 10;
+         bucket[r][bucket_cnt[r]] = a[i];
+         bucket_cnt[r] += 1;
+      }
+      i = 0;
+      for (k = 0; k < 10; k++){
+         for (j = 0; j < bucket_cnt[k]; j++){
+            a[i] = bucket[k][j];
+            i++;
+         }
+      }
+      divisor *= 10;
+      printf ("After pass %d : ", pass + 1);
+      for (i = 0; i < n; i++)
+         printf ("%d ", a[i]);
+      printf ("\n");
+   }
+}
+int main (){
+   int i, n, a[10];
+   printf ("Enter the number of items to be sorted: ");
+   scanf ("%d", &n);
+   printf ("Enter items: ");
+   for (i = 0; i < n; i++){
+      scanf ("%d", &a[i]);
+   }
+   radix_sort (a, n);
+   printf ("Sorted items : ");
+   for (i = 0; i < n; i++)
+      printf ("%d ", a[i]);
+   printf ("\n");
+   return 0;
+}
+
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+import java.util.*;
+public class my_radix_sorting {
+   static int get_max_val(int my_arr[], int arr_len) {
+      int max_val = my_arr[0];
+      for (int i = 1; i < arr_len; i++)
+         if (my_arr[i] > max_val)
+         max_val = my_arr[i];
+      return max_val;
+   }
+   static void countSort(int my_arr[], int arr_len, int exp) {
+      int result[] = new int[arr_len];
+      int i;
+      int count[] = new int[10];
+      Arrays.fill(count,0);
+      for (i = 0; i < arr_len; i++)
+         count[ (my_arr[i]/exp)%10 ]++;
+      for (i = 1; i < 10; i++)
+         count[i] += count[i - 1];
+      for (i = arr_len - 1; i >= 0; i--) {
+         result[count[ (my_arr[i]/exp)%10 ] - 1] = my_arr[i];
+         count[ (my_arr[i]/exp)%10 ]--;
+      }
+      for (i = 0; i < arr_len; i++)
+         my_arr[i] = result[i];
+   }
+   static void radix_sort(int my_arr[], int arr_len) {
+      int m = get_max_val(my_arr, arr_len);
+      for (int exp = 1; m/exp > 0; exp *= 10)
+      countSort(my_arr, arr_len, exp);
+   }
+   public static void main (String[] args) {
+      int my_arr[] = {56, 78, 102, 345, 67, 90, 102, 45, 78};
+      int arr_len = my_arr.length;
+      System.out.println("The array after performing radix sort is ");
+      radix_sort(my_arr, arr_len);
+      for (int i=0; i< arr_len; i++)
+      System.out.print(my_arr[i]+" ");
+   }
+}   
+        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+def counting_Sort(arr, p):
+    s = len(arr)
+    result = [0] * s
+    c = [0] * 10
+    
+    # count of elements
+    for i in range(0, s):
+        index = arr[i] // p
+        c[index % 10] += 1
+        
+    # cumulative count
+    for i in range(1, 10):
+        c[i] += c[i - 1]
+
+    # sorted order
+    i = s - 1
+    while i >= 0:
+        index = arr[i] // p  
+        result[c[index % 10] - 1] = arr[i]
+        c[index % 10] -= 1
+        i -= 1
+        
+    for i in range(0, s):
+        arr[i] = result[i]
+
+
+#  radix sort
+def radix_Sort(arr):
+    maximum = max(arr)
+
+    p = 1
+    while maximum // p > 0:
+        counting_Sort(arr, p)
+        p *= 10
+
+#driver code
+array = [354, 954, 411, 9]
+print("The original array is: ", array)
+radix_Sort(array)
+print("The sorted array is: ", array)
+
+
+
+</code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Before sorting array</h4>
+                <code>354, 954, 411, 9</code>
+                <h4>Sorted array is</h4>
+                <code>9, 354, 411, 954</code>
+            </div>
+            
+        </section>
+        <!--Time complexity-->
+        <section class="time">
+            <h3>Time Complexity </h3>
+            <div class="times">
+                <p>best case, average case, worst case</p>
+                <img src="http://drive.google.com/uc?export=view&id=1RCh9AaSEvYrjGYMwyWAxs5D1jbiotYZH">
+
+            </div>
+        </section>
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="https://cdn-media-1.freecodecamp.org/images/Yol000Gd9BoRp6zYTLOlLaBwogDcQEUQ3DQ9">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sorts">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="700px" height="500px" src="https://youtube.com/embed/nu4gDuFabIM"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="6merge.html">previous</a>
+                <p>Merge sort</p>
+            </div>
+            <div class="next">
+                <a href="8selectionsort.html">Next</a>
+                <p>Selection sort</p>
+            </div>
+        </section>
+        <script>
+           
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+            </script>
+    </body>
+</html>

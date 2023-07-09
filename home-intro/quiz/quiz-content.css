@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ 
+ body{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'popins',sans-serif;
+    color: black;
+    background-color: white;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+.navi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: transparent;
+}
+.navi a{
+    background-color: #3ab795;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+ .quiz{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     text-align: center;
+     
+     padding: 2rem;
+     height: 700px;
+
+ }
+ .quiz-content{
+     padding: 3rem;
+     display: block;
+     color: #C1B9AE;
+   /* border: 1px solid #555;*/
+    border-radius: 20px;
+    background-color: #171717;
+   }
+ .quiz-content p{
+     color: #555;
+     margin: 0%;
+ }
+ .quiz-content h1{
+     font-size:5rem;
+     background: #EDAEF9;
+background: linear-gradient(to right, #EDAEF9 0%, #81B1FA 100%);
+ -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+ }
+ .categories{
+     margin: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .categories img{
+     height: 30px;
+     padding: 5px;
+ }
+ .categories a{
+     margin: 10px;
+     padding: 1rem;
+     text-decoration: none;
+     color: #0EF6BE;
+  
+     border-radius: 10px;
+ }
+ .categories a:hover{
+     text-decoration: underline;
+ }
+ #cone{
+     display: block;
+     position: absolute;
+     top: 2%;
+     left: 1%;
+     height: 500px;
+     width: 500px;
+     animation: cone 10s infinite;
+ }
+ @keyframes cone{
+     0%{
+         top:0%;
+     }
+     50%{
+         top: 50px;
+     }
+     100%{
+         top: 0px;
+     }
+ }
+ #cyclic{
+     display: block;
+     position: absolute;
+     top: 2%;
+     right: 0%;
+     height: 500px;
+     width: 500px;
+     animation: cyclic 10s infinite;
+ }
+ @keyframes cyclic{
+    0%{
+        top:0%;
+    }
+    50%{
+        top: 50px;
+    }
+    100%{
+        top: 0px;
+    }
+ }

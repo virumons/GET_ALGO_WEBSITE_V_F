@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ 
+ body{
+    padding: 0%;
+    margin: 0%;
+    font-family: popins,sans-serif;
+    color: #f9f9f9;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1016%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M362.42963949506884 429.3770680031414L466.47044444482344 369.3090812586952 406.4024577003772 265.26827630894053 302.3616527506226 325.3362630533868z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1209.96%2c655.718C1249.688%2c653.38%2c1283.193%2c631.523%2c1305.626%2c598.651C1332.187%2c559.73%2c1359.045%2c511.741%2c1336.425%2c470.404C1313.312%2c428.165%2c1258.043%2c421.305%2c1209.96%2c423.824C1166.905%2c426.079%2c1127.425%2c446.016%2c1104.535%2c482.552C1080.03%2c521.667%2c1068.572%2c571.767%2c1092.574%2c611.192C1115.899%2c649.504%2c1165.184%2c658.354%2c1209.96%2c655.718' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1335.255%2c672.048C1373.681%2c671.932%2c1409.223%2c649.961%2c1426.981%2c615.884C1443.567%2c584.056%2c1435.098%2c546.717%2c1416.59%2c515.967C1398.756%2c486.337%2c1369.836%2c463.826%2c1335.255%2c463.483C1300.123%2c463.134%2c1269.283%2c484.277%2c1251.075%2c514.325C1232.103%2c545.633%2c1225.331%2c584.143%2c1242.568%2c616.439C1260.75%2c650.506%2c1296.639%2c672.164%2c1335.255%2c672.048' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M723.899%2c439.638C753.304%2c438.87%2c779.771%2c423.457%2c795.154%2c398.385C811.337%2c372.009%2c815.979%2c339.749%2c802.176%2c312.053C786.779%2c281.159%2c758.352%2c257.534%2c723.899%2c255.415C685.656%2c253.063%2c644.924%2c267.436%2c626.952%2c301.274C609.73%2c333.7%2c624.824%2c372.212%2c645.893%2c402.282C663.624%2c427.588%2c693.011%2c440.444%2c723.899%2c439.638' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M175.50391447377842 170.28773390493203L175.5039144737784 48.12374648879906 53.33992705764544 48.12374648879907 53.339927057645454 170.28773390493205z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M83.573%2c435.525C110.892%2c434.393%2c134.229%2c419.051%2c149.221%2c396.186C166.151%2c370.366%2c180.263%2c338.11%2c165.07%2c311.232C149.729%2c284.093%2c114.734%2c279.126%2c83.573%2c280.047C54.364%2c280.91%2c25.438%2c290.995%2c10.016%2c315.816C-6.249%2c341.994%2c-8.366%2c375.792%2c7.769%2c402.05C23.268%2c427.274%2c53.993%2c436.751%2c83.573%2c435.525' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1076.2649278394456 425.8883767073665L1101.8683136947227 264.2349604828007 940.214897470157 238.6315746275236 914.6115116148799 400.2849908520894z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M257.3869097137981 356.5705397644036L236.09531772451953 508.0680887462746 408.8844586956691 377.86213175368215z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1016'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    animation: myAnim 4s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+.navi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #f9f9f9;
+    background-color: transparent;
+}
+.navi a{
+    background-color: #0EF6BE;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.navi a:hover{
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+}
+
+/*quiz*/
+.quiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*quiz-content*/
+.quiz-content{
+    display: block;
+    text-align: justify;
+    }
+/*head*/
+p{
+    color: #0EF6BE;
+    font-size: 15px;
+    padding: 5px;
+    width: 200px;
+    border-bottom: .5px solid #555;
+    text-align: center;
+}
+.head{
+    font-size: 25px;
+    background: #EDAEF9;
+    background: linear-gradient(to right, #EDAEF9 0%, #81B1FA 100%);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    max-width: 700px;
+}
+/*next button*/
+#submit{
+    display: block;
+    width: 400px;
+    text-align: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border-radius: 10px;
+    color: #f9f9f9;
+    cursor: pointer;
+    padding: 10px;
+}
+#submit:hover{
+    opacity: 0.8;
+}
+.choice{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+
+}
+.choose{
+    padding: .5rem;
+    background-color: #171717;
+    border-radius: 10px;
+    width: 25rem;
+    margin: 5px;
+    
+
+}
+.choice input[type="radio"]:checked+label {
+    display: block;
+    border-radius: 8px;
+    font-weight: 700;
+    background: linear-gradient(to right, #EDAEF9 0%, #81B1FA 100%);
+    transition: 0.4s ease-in-out;
+}
+.choose label{
+    padding:.5rem;
+    cursor: pointer;
+}
+.choose input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}

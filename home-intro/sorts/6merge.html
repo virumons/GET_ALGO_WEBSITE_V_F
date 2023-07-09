@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Merge Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--counting sort-->
+        <section class="content">
+            <div class="container">
+                <h4>Sorts</h4>
+                <h2>Merge Sort</h2>
+                <p>
+                <span id="al">Merge sort</span> The merge sort technique is based on divide and conquers technique.
+                 We divide the whole dataset into smaller parts and merge them into a larger piece in sorted order. 
+                It is also very effective for worst cases because this algorithm has lower time complexity for the worst case also
+              </p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=1yr-9kFklARL9Afp8ACoSGmP26JESt4L9"></li>                  
+                </ul>
+            </div>
+        </section>
+
+        <section class="algorithms">
+            
+            <div class="algorithm">
+                <h2>Algorithm -<span id="al" style="font-weight:500 ;"> Merge sort</span></h2>
+                   <pre>
+                       <code>
+ Algorithm Mergesort [A (0..n-1)]
+<span id="comment"> 
+    //This algorithm sorts array A [0...n-1] by recursive mergesort.
+    // Input : An array A(0,n-1) of orderable elements.
+    // Output : Array A [0,n-1] sorted in non- decreasing order .</span>
+    <span id="code">
+      { 
+        if n>1 
+        { 
+        Copy A [0…[n/2]-1] to B [0…[n/2]-1] 
+        Copy A [[n/2]… n-1] to C [0…[ n/2] - 1] 
+        MergeSort (B [0…[n/2]-1]) 
+        MergeSort (C [0…[ n/2] - 1]) Merge (B, C, A) 
+        } 
+        } 
+        
+        Algorithm: Merge (B [0…p-1], C [0...q-1], A [0...p+q-1]) 
+        
+        //Merges two sorted arrays into one sorted array. 
+        //Input: Arrays B [0…p-1] and C [0...q-1] both sorted.
+       //Output: Sorted array A [0...p+q-1] of the elements of B and C. 
+        {
+         i ← 0;  j←0;  k←0 
+        while i<= C[j] A[k] ← B[i]; 
+        i← i+1 
+        else A[k] ← C[j]; j← j+1 k ← k+1 
+        } 
+        if i=p 
+        {
+        copy C [j…q-1] to A[k…p+q-1] 
+        else copy B [i…p-1] to A[k…p+q-1] 
+        } 
+        
+
+</span>                                                     
+                    </code>         
+                </pre>                     
+            </div>
+        </section>
+        <!--Algorithms ends-->
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Merge sort</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+
+#include < stdio.h>  
+/* Function to merge the subarrays of a[] */  
+void merge(int a[], int beg, int mid, int end)    
+{    
+    int i, j, k;  
+    int n1 = mid - beg + 1;    
+    int n2 = end - mid;    
+      
+    int LeftArray[n1], RightArray[n2]; //temporary arrays  
+      
+    /* copy data to temp arrays */  
+    for (int i = 0; i < n1; i++)    
+    LeftArray[i] = a[beg + i];    
+    for (int j = 0; j < n2; j++)    
+    RightArray[j] = a[mid + 1 + j];    
+      
+    i = 0; /* initial index of first sub-array */  
+    j = 0; /* initial index of second sub-array */   
+    k = beg;  /* initial index of merged sub-array */  
+      
+    while (i < n1 && j < n2)    
+    {    
+        if(LeftArray[i] <= RightArray[j])    
+        {    
+            a[k] = LeftArray[i];    
+            i++;    
+        }    
+        else    
+        {    
+            a[k] = RightArray[j];    
+            j++;    
+        }    
+        k++;    
+    }    
+    while (i< n1)    
+    {    
+        a[k] = LeftArray[i];    
+        i++;    
+        k++;    
+    }    
+      
+    while (j < n2)    
+    {    
+        a[k] = RightArray[j];    
+        j++;    
+        k++;    
+    }    
+}    
+  
+void mergeSort(int a[], int beg, int end)  
+{  
+    if (beg < end)   
+    {  
+        int mid = (beg + end) / 2;  
+        mergeSort(a, beg, mid);  
+        mergeSort(a, mid + 1, end);  
+        merge(a, beg, mid, end); 
+  }
+}  
+  
+/* Function to print the array */  
+void printArray(int a[], int n)  
+{  
+    int i;  
+    for (i = 0; i < n; i++)  
+        printf("%d ", a[i]);  
+    printf("\n");  
+}  
+  
+int main()  
+{  
+    int a[] = { 12, 31, 25, 8, 32, 17, 40, 42 };  
+    int n = sizeof(a) / sizeof(a[0]);  
+    printf("Before sorting array elements are - \n");  
+    printArray(a, n);  
+    mergeSort(a, 0, n - 1);  
+    printf("After sorting array elements are - \n");  
+    printArray(a, n);  
+    return 0;  
+}                             
+                             
+                            
+
+       
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+class Merge {  
+  
+    /* Function to merge the subarrays of a[] */  
+    void merge(int a[], int beg, int mid, int end)    
+    {    
+        int i, j, k;  
+        int n1 = mid - beg + 1;    
+        int n2 = end - mid;    
+          
+       /* temporary Arrays */  
+            int LeftArray[] = new int[n1];  
+            int RightArray[] = new int[n2];  
+          
+        /* copy data to temp arrays */  
+        for (i = 0; i < n1; i++)    
+        LeftArray[i] = a[beg + i];    
+        for (j = 0; j < n2; j++)    
+        RightArray[j] = a[mid + 1 + j];    
+          
+        i = 0; /* initial index of first sub-array */  
+        j = 0; /* initial index of second sub-array */   
+        k = beg;  /* initial index of merged sub-array */  
+          
+        while (i < n1 && j < n2)    
+        {    
+            if(LeftArray[i] <= RightArray[j])    
+            {    
+                a[k] = LeftArray[i];    
+                i++;    
+            }    
+            else    
+            {    
+                a[k] = RightArray[j];    
+                j++;    
+            }    
+            k++;    
+        }    
+        while (i< n1)    
+        {    
+            a[k] = LeftArray[i];    
+            i++;    
+            k++;    
+        }    
+          
+        while (j< n2)    
+        {    
+            a[k] = RightArray[j];    
+            j++;    
+            k++;    
+        }    
+    }    
+      
+    void mergeSort(int a[], int beg, int end)  
+    {  
+        if (beg < end)   
+    
+        {  
+    
+    int mid = (beg + end) / 2;  
+            mergeSort(a, beg, mid);  
+            mergeSort(a, mid + 1, end);  
+            merge(a, beg, mid, end);  
+        }  
+    }  
+      
+    /* Function to print the array */  
+    void printArray(int a[], int n)  
+    {  
+        int i;  
+        for (i = 0; i < n; i++)  
+            System.out.print(a[i] + " ");  
+    }  
+      
+    public static void main(String args[])  
+    {  
+        int a[] = { 11, 30, 24, 7, 31, 16, 39, 41 };  
+        int n = a.length;  
+        Merge m1 = new Merge();  
+        System.out.println("\nBefore sorting array elements are - ");  
+        m1.printArray(a, n);  
+        m1.mergeSort(a, 0, n - 1);  
+        System.out.println("\nAfter sorting array elements are - ");  
+        m1.printArray(a, n);  
+        System.out.println("");  
+    }  
+      
+      }                              
+                            
+
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+# Merges two subarrays of arr[].
+# First subarray is arr[l..m]
+# Second subarray is arr[m+1..r]
+def merge_sort(unsortedList):
+if len(unsortedList) > 1:
+mid = len(unsortedList) // 2
+leftList = unsortedList[:mid]
+rightList = unsortedList[mid:]
+
+# Recursive call when we go two list (left and right) for sorting
+merge_sort(leftList)
+merge_sort(rightList)
+
+# Because we have two lists, so we need to iterators for iteration of each list
+m = 0
+n = 0
+# We need one common iterator which iterates to the main list
+z = 0                                
+while m < len(leftList) and n < len(rightList):
+if leftList[m] <= rightList[n]:
+# Here we are using the first left side elements
+unsortedList[z] = leftList[m]
+# Increment the main iterator
+m += 1
+else:
+  unsortedList[z] = rightList[n]
+  n += 1
+z += 1
+
+# If values are left in the list, then we process here
+while m < len(leftList):
+unsortedList[z] = leftList[m]
+m += 1
+z += 1
+
+while n < len(rightList):
+unsortedList[z]=rightList[n]
+n += 1
+z += 1
+
+unsortedList = [23,56,0,23,85,100,200,12,32,78,90,102]
+merge_sort(unsortedList)
+print(unsortedList)                                      
+                          
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Before sorting array</h4>
+                <code>22 33 11 88 33 44</code>
+                <h4>Sorted array is</h4>
+                <code>11 22 33 33 44 88 </code>
+            </div>
+            
+        </section>
+        <!--Time complexity-->
+        <section class="time">
+            <h3>Time Complexity </h3>
+            <div class="times">
+                <img src="http://drive.google.com/uc?export=view&id=1dNO1llnicJ9A03PKWTcAtk-dggGHBdD-">
+                
+            </div>
+        </section>
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="http://drive.google.com/uc?export=view&id=1R_bXmGghMDCV77h4FbU4ndYSykFezcXZ">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="700px" height="500px" src="https://youtube.com/embed/D2RLl3Q9Z5A"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="5insertionsort.html">previous</a>
+                <p>Insertion sort</p>
+            </div>
+            <div class="next">
+                <a href="7radix.html">Next</a>
+                <p>Radix sort</p>
+            </div>
+        </section>
+        <script>
+           
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+            </script>
+    </body>
+</html>

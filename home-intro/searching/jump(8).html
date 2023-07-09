@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jump search technique</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+        
+        <!--Jump search-->
+        <section class="content">
+            <div class="container">
+                <h4> search </h4>
+                <h2>Jump search technique</h2>
+                <p>
+                <span id="al">Jump search technique</span>also works for ordered lists. It creates a block and tries to find the element in that block. If the item is not in the block, it shifts the entire block. The block size is based on the size of the list. If the size of the list is n then block size will be √n. After finding a correct block it finds the item using a linear search technique. The jump search lies between linear search and binary search according to its performance.
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=1VHjxBvQq3VmyrAB6S51LqWgeRWLb0sCm"></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Jump search</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+   // C program for jhmup Search
+    #include
+        #include
+        
+        using namespace std;
+        int jumpSearch(int array[], int size, int key) {
+           int start = 0;
+           int end = sqrt(size); //the square root of array length
+        
+           while(array[end] <= key && end < size) {
+              start = end; //it it is not correct block then shift block
+              end += sqrt(size);
+              if(end > size - 1)
+                 end = size; //if right exceeds then bound the range
+           }
+        
+           for(int i = start; i> n;
+           int arr[n]; //create an array of size n
+           cout << "Enter items: " << endl;
+        
+           for(int i = 0; i< n; i++) {
+              cin >> arr[i];
+           }
+        
+           cout << "Enter search key to search in the list: ";
+           cin >> searchKey;
+           if((loc = jumpSearch(arr, n, searchKey)) >= 0)
+              cout << "Item found at location: " << loc << endl;
+           else
+              cout << "Item is not found in the list." << endl;
+        }
+                               
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+   // Java program to implement Jump Search.
+    public class JumpSearch
+    {
+        public static int jumpSearch(int[] arr, int x)
+        {
+            int n = arr.length;
+     
+            // Finding block size to be jumped
+            int step = (int)Math.floor(Math.sqrt(n));
+     
+            // Finding the block where element is
+            // present (if it is present)
+            int prev = 0;
+            while (arr[Math.min(step, n)-1] < x)
+            {
+                prev = step;
+                step += (int)Math.floor(Math.sqrt(n));
+                if (prev >= n)
+                    return -1;
+            }
+     
+            // Doing a linear search for x in block
+            // beginning with prev.
+            while (arr[prev] < x)
+            {
+                prev++;
+     
+                // If we reached next block or end of
+                // array, element is not present.
+                if (prev == Math.min(step, n))
+                    return -1;
+            }
+     
+            // If element is found
+            if (arr[prev] == x)
+                return prev;
+     
+            return -1;
+        }
+     
+        // Driver program to test function
+        public static void main(String [ ] args)
+        {
+            int arr[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21,
+                        34, 55, 89, 144, 233, 377, 610};
+            int x = 55;
+     
+            // Find the index of 'x' using Jump Search
+            int index = jumpSearch(arr, x);
+     
+            // Print the index where 'x' is located
+            System.out.println("\nNumber " + x +
+                                " is at index " + index);
+        }
+    }
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+   # Python3 code to implement Jump Search
+import math
+ 
+def jumpSearch( arr , x , n ):
+     
+    # Finding block size to be jumped
+    step = math.sqrt(n)
+     
+    # Finding the block where element is
+    # present (if it is present)
+    prev = 0
+    while arr[int(min(step, n)-1)] < x:
+        prev = step
+        step += math.sqrt(n)
+        if prev >= n:
+            return -1
+     
+    # Doing a linear search for x in
+    # block beginning with prev.
+    while arr[int(prev)] < x:
+        prev += 1
+         
+        # If we reached next block or end
+        # of array, element is not present.
+        if prev == min(step, n):
+            return -1
+     
+    # If element is found
+    if arr[int(prev)] == x:
+        return prev
+     
+    return -1
+ 
+# Driver code to test function
+arr = [ 0, 1, 1, 2, 3, 5, 8, 13, 21,
+    34, 55, 89, 144, 233, 377, 610 ]
+x = 55
+n = len(arr)
+ 
+# Find the index of 'x' using Jump Search
+index = jumpSearch(arr, x, n)
+ 
+# Print the index where 'x' is located
+print("Number" , x, "is at index" ,"%.0f"%index)
+ 
+
+
+
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Input:
+
+    A sorted list of data:
+    10 13 15 26 28 50 56 88 94 127 159 356 480 567 689 699 780 850 956 995
+    The search key 356</h4>
+                <code> Output:
+    Item found at location: 11 </code>
+             
+            </div>
+            
+        </section>
+
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--HigHGFxD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/m4zwhvxf6ujdrvt9xoq5.gif">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Visualize</a>
+            </div>
+            
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="800px" height="600px" src="https://www.youtube.com/embed/63kS6ZkMpkA"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="sublist(3).html">previous</a>
+                <p>Sublist Search</p>
+            </div>
+            <div class="next">
+                <a href="fab(9).html">Next</a>
+                <p>Fibonacci Search</p>
+            </div>
+        </section>
+        <script>
+
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+  
+              for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                  } else {
+                  dropdownContent.style.display = "block";
+                  }
+              });
+              }
+              </script>
+    </body>
+</html>

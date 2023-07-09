@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>quick Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--quick sort-->
+        <section class="content">
+            <div class="container">
+                <h4>Sorts</h4>
+                <h2>Quick Sort</h2>
+                <p>
+                <span id="al">Quick sort</span>Quicksort is a divide and conquer algorithm. It first divides the input array into two smaller sub-arrays: 
+the low elements and the high elements. It then recursively sorts the sub-arrays. 
+                </p>
+
+                <p>Example :</p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=1rs8i5j_72o_TZi_15z6nF9fQ7jqzSmVm"
+                        style="height: 20pc; width: 40pc;"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="algorithms">
+            
+            <div class="algorithm">
+                <h2>Algorithm -<span id="al" style="font-weight:500 ;"> Quick sort</span></h2>
+                   <pre>
+                       <code>
+ Algorithm Quicksort [A (0..n-1)]
+<span id="comment"> 
+    // Sort a given array by Quick sort.
+    // Input : An array A(0,n-1) of orderable elements.
+    // Output : Array A [0,n-1] sorted in non- decreasing order .</span>
+    <span id="code">
+    if low < high then
+        p := partition(A, low, high)
+        quicksort(A, low, p - 1)
+        quicksort(A, p + 1, high)
+
+Algorithm partition(A, low, high)
+    pivot := A[high]
+    i := lo
+    for j := low to high do
+        if A[j] < pivot then
+            swap A[i] with A[j]
+            i := i + 1
+    swap A[i] with A[hi]
+    return i
+
+
+</span>                                                     
+                    </code>         
+                </pre>                     
+            </div>
+        </section>
+        <!--Algorithms ends-->
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Following are the implementation of <span id="al"> Quick sort</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+#include< stdio.h>
+void quicksort(int number[25],int first,int last){
+   int i, j, pivot, temp;
+   if(first< last){
+      pivot=first;
+      i=first;
+      j=last;
+      while(i< j){
+         while(number[i]<=number[pivot]&&i< last)
+         i++;
+         while(number[j] >number[pivot])
+         j--;
+         if(i< j){
+            temp=number[i];
+            number[i]=number[j];
+            number[j]=temp;
+         }
+      }
+      temp=number[pivot];
+      number[pivot]=number[j];
+      number[j]=temp;
+      quicksort(number,first,j-1);
+      quicksort(number,j+1,last);
+   }
+}
+int main(){
+   int i, count, number[25];
+   printf("How many elements are u going to enter?: ");
+   scanf("%d",&count);
+   printf("Enter %d elements: ", count);
+   for(i=0;i< count;i++)
+   scanf("%d",&number[i]);
+   quicksort(number,0,count-1);
+   printf("Order of Sorted elements: ");
+   for(i=0;i< count;i++)
+   printf(" %d",number[i]);
+   return 0;
+}
+
+       
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+import java.util.*;
+class QuickSort { 
+    //selects last element as pivot, pi using which array is partitioned. 
+    int partition(int intArray[], int low, int high) { 
+        int pi = intArray[high];  
+        int i = (low-1); // smaller element index   
+        for (int j=low; j< high; j++) { 
+            // check if current element is less than or equal to pi 
+            if (intArray[j] <= pi) { 
+                i++; 
+                // swap intArray[i] and intArray[j] 
+                int temp = intArray[i]; 
+                intArray[i] = intArray[j]; 
+                intArray[j] = temp; 
+            } 
+        } 
+        // swap intArray[i+1] and intArray[high] (or pi) 
+        int temp = intArray[i+1]; 
+        intArray[i+1] = intArray[high]; 
+        intArray[high] = temp; 
+        return i+1; 
+    } 
+  //routine to sort the array partitions recursively
+    void quick_sort(int intArray[], int low, int high) { 
+        if (low < high) { 
+            //partition the array around pi=>partitioning index and return pi
+            int pi = partition(intArray, low, high); 
+  
+            // sort each partition recursively 
+            quick_sort(intArray, low, pi-1); 
+            quick_sort(intArray, pi+1, high); 
+        } 
+    } 
+}
+class Main{
+    public static void main(String args[]) {
+        //initialize a numeric array, intArray
+        int intArray[] = {4,-1,6,8,0,5,-3}; 
+        int n = intArray.length; 
+        //print the original array
+        System.out.println("Original Array: " + Arrays.toString(intArray));
+        //call quick_sort routine using QuickSort object
+        QuickSort obj = new QuickSort(); 
+        obj.quick_sort(intArray, 0, n-1); 
+        //print the sorted array
+        System.out.println("\nSorted Array: " + Arrays.toString(intArray)); 
+    } 
+}
+
+
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+# divide function
+def partition(arr,low,high):
+   i = ( low-1 )
+   pivot = arr[high] # pivot element
+   for j in range(low , high):
+      # If current element is smaller
+      if arr[j] <= pivot:
+         # increment
+         i = i+1
+         arr[i],arr[j] = arr[j],arr[i]
+   arr[i+1],arr[high] = arr[high],arr[i+1]
+   return ( i+1 )
+# sort
+def quickSort(arr,low,high):
+   if low < high:
+      # index
+      pi = partition(arr,low,high)
+      # sort the partitions
+      quickSort(arr, low, pi-1)
+      quickSort(arr, pi+1, high)
+# main
+arr = [2,5,3,8,6,5,4,7]
+n = len(arr)
+quickSort(arr,0,n-1)
+print ("Sorted array is:")
+for i in range(n):
+   print (arr[i],end=" ")
+
+
+
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Before sorting array</h4>
+                <code>5 3 2 5 8 7 6</code>
+                <h4>Sorted array is</h4>
+                <code>2 3 4 5 5 6 7 8</code>
+            </div>
+            
+        </section>
+        <!--Time complexity-->
+        <section class="time">
+            <h3>Time Complexity </h3>
+            <div class="times">
+                <p>best case, average case, worst case</p>
+                <img src="http://drive.google.com/uc?export=view&id=1ILjedWTG2U59qrPfNtMeyKCc-r25a8Sj">
+            </div>
+        </section>
+
+        <!--visualized-->
+        <section class="visual">
+            <h3>Visualized</h3>
+            <div class="visuals">
+                <img src="https://cdn-media-1.freecodecamp.org/images/kjyINxAg57U9i3L3LR82l3a78eczlbmTWxeJ">
+                <h4>Note: For better Visualized Understanding visit our <span style="color: #171717;"><b>algorithm Visualizer</b></span> </h4>
+                <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Visualize</a>
+            </div>
+        </section>
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="600px" height="500px" src="https://youtube.com/embed/PgBzjlCcFvc"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="9shell.html">Previous</a>
+                <p>Shell sort</p>
+            </div>
+            <div class="next">
+                <a href="../searching/BFS1.html">Next</a>
+                <p>Breadth-first-search</p>
+            </div>
+        </section>
+        <script>
+           
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+            });
+            }
+            </script>
+    </body>
+</html>

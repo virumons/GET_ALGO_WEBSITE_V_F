@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Exponential Search - Get Algo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/000000/old-vmware-logo.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body>
+        <section class="topnav">
+            <div class="tnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../landing page/about.html">About</a></li>
+                    <li><a href="../landing page/intro-search.html">Searching</a></li>
+                    <li><a href="../landing page/intro-sort.html">Sorting</a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!---->
+        <section class="sidenavi">
+            <div class="sidenav">
+                <button class="dropdown-btn">Algorithm
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../landing page/index2.html">Introduction to Alogrithm</a>
+                    <a href="../landing page/intro-search.html">Searching Alogrithm</a>
+                    <a href="../landing page/intro-sort.html">Sorting Alogrithm</a>
+                  </div>
+                  <!--Searching Alogorithms-->
+                  <button class="dropdown-btn">Searching Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../searching/BFS1.html">Breath first search</a>
+                    <a href="../searching/DFS2.html">Deapth first seacrh</a>
+                    <a href="../searching/Exponential(5).html">Exponential search</a>
+                    <a href="../searching/fab(9).html">Fibonacci Search </a>
+                    <a href="../searching/jump(8).html">Jump search</a>
+                    <a href="../searching/interpolation(4).html">Interpolation search</a>
+                    <a href="../searching/linearsearch(6).html">Linear search</a>
+                    <a href="../searching/sublist(3).html">sublist search</a>
+                    <a href="../searching/binary3.html">Binary search</a>
+                  </div>
+                  <!--Sorting alogrithm-->
+                  <button class="dropdown-btn">Sorting Algorithms
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../sorts/3countsort.html">Counting sort</a>
+                    <a href="../sorts/4heapsort.html">Heap sort</a>
+                    <a href="../sorts/10quick.html">Quick sort</a>
+                    <a href="../sorts/7radix.html">Radix sort</a>
+                    <a href="../sorts/9shell.html">Shell sort</a>
+                    <a href="../sorts/2bucket.html">Bucket sort</a>
+                    <a href="../sorts/1bubble.html">Bubble sort</a>
+                    <a href="../sorts/5insertionsort.html">Insertion sort</a>
+                    <a href="../sorts/6merge.html">Merge sort</a>
+                    <a href="../sorts/8selectionsort.html">Selection sort</a>
+                  </div>
+                <!--visual-->
+                <button class="dropdown-btn" >
+                    Visualize 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="https://algorithm-visualizer.org/brute-force/breadth-first-search">Breath first search</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/depth-first-search">Deapth first seacrh</a>
+                    <a href="https://algorithm-visualizer.org/dynamic-programming/fibonacci-sequence">Fibonacci Search </a>
+                    <a href="https://algorithm-visualizer.org/branch-and-bound/binary-search">Binary search</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/counting-sort">Counting sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/heapsort">Heap sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/quicksort">Quick sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/radix-sort">Radix sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/shellsort">Shell sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/bucket-sort">Bucket sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/bubble-sort">Bubble sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/insertion-sort">Insertion sort</a>
+                    <a href="https://algorithm-visualizer.org/divide-and-conquer/merge-sort">Merge sort</a>
+                    <a href="https://algorithm-visualizer.org/brute-force/selection-sort">Selection sort</a>
+                </div>
+                <!--code-->
+                <button class="dropdown-btn" >
+                    Code Editor
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://www.programiz.com/c-programming/online-compiler/">C</a>
+                  <a href="https://www.programiz.com/java-programming/online-compiler/">Java</a>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/">Python</a>
+                </div>
+                
+                <a href="../quiz/quiz-start.html" >Quiz</a>
+                <a href="../comment/q_index.php">Comment Box</a>
+                </div>
+            </section>
+        <!--end side nav-->
+
+        <!--Exponential Search-->
+        <section class="content">
+            <div class="container">
+                <h4>search</h4>
+                <h2>Exponential Search</h2>
+                <p>
+                <span id="al">Exponential Search</span>an exponential search (also called doubling search or galloping search or Struzik search) is an algorithm, created by Jon Bentley and Andrew Chi-Chih Yao in 1976, for searching sorted, unbounded/infinite lists. There are numerous ways to implement this with the most common being to determine a range that the search key resides in and performing a binary search within that range. This takes O(log i) where i is the position of the search key in the list, if the search key is in the list, or the position where the search key should be, if the search key is not in the list
+
+                The name of this searching algorithm may be misleading as it works in O(Log n) time. The name comes from the way it searches an element.
+                
+                Exponential search involves two steps
+                
+               1. Find range where element is present
+               2. Do Binary Search in above found range.
+                </p>
+
+                <p>Example :Given a sorted array, and an element x to be 
+                    searched, find position of x in the array.
+                    
+                    Input:  arr[] = {10, 20, 40, 45, 55}
+                            x = 45
+                    Output: Element found at index 3
+                    
+                    Input:  arr[] = {10, 15, 25, 45, 55}
+                            x = 15
+                    Output: Element found at index 1
+                    
+                    </p>
+                <ul>
+                    <li><img src="http://drive.google.com/uc?export=view&id=1rfx7WeioCgsum2rlnFYKTh6RrALeutFw" width="700px"></li>
+                </ul>
+            </div>
+        </section>
+
+        
+
+        <!--programs-->
+        <section class="programs">
+            <div class="programhead">
+            <h3> Below are the implementation of <span id="al">Exponential Search</span> into programs </h3>
+        </div>
+        <!--div heading ends-->
+        <!--responsive tabs-->
+            <div class="mytabs">
+                    <input type="radio" id="tab1" name="mytabs" checked>
+                    <label for="tab1"> C </label>
+                <!-- c language tab-->
+                    <div class="tab">
+                    <pre>
+                        <code>
+// C++ program to find an element x in a
+// sorted array using Exponential search.
+#include 
+#include 
+#include 
+#define min
+ 
+int binarySearch(int arr[], int, int, int);
+ 
+// Returns position of first occurrence of
+// x in array
+int exponentialSearch(int arr[], int n, int x)
+{
+    // If x is present at first location itself
+    if (arr[0] == x)
+        return 0;
+ 
+    // Find range for binary search by
+    // repeated doubling
+    int i = 1;
+    while (i < n && arr[i] <= x)
+        i = i*2;
+ 
+    //  Call binary search for the found range.
+    return binarySearch(arr, i/2,
+                            min(i, n-1), x);
+}
+ 
+// A recursive binary search function. It returns
+// location of x in  given array arr[l..r] is
+// present, otherwise -1
+int binarySearch(int arr[], int l, int r, int x)
+{
+    if (r >= l)
+    {
+        int mid = l + (r - l)/2;
+ 
+        // If the element is present at the middle
+        // itself
+        if (arr[mid] == x)
+            return mid;
+ 
+        // If element is smaller than mid, then it
+        // can only be present n left subarray
+        if (arr[mid] > x)
+            return binarySearch(arr, l, mid-1, x);
+ 
+        // Else the element can only be present
+        // in right subarray
+        return binarySearch(arr, mid+1, r, x);
+    }
+ 
+    // We reach here when element is not present
+    // in array
+    return -1;
+}
+ 
+// Driver code
+int main(void)
+{
+   int arr[] = {2, 3, 4, 10, 40};
+   int n = sizeof(arr)/ sizeof(arr[0]);
+   int x = 10;
+   int result = exponentialSearch(arr, n, x);
+   (result == -1)? printf("Element is not
+                            present in array")
+                 : printf("Element is present
+                                 at index %d",
+                                       result);
+   return 0;
+}                         
+                            
+                               
+                        </code>
+                        <a href="https://www.programiz.com/c-programming/online-compiler/"> Code </a>
+                    </pre>
+                    
+                </div>
+                <!-- C language tab ends-->
+
+                <!--Java language tab-->
+                    <input type="radio" id="tab2" name="mytabs" >
+                    <label for="tab2">Java</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+// Java program to
+// find an element x in a
+// sorted array using
+// Exponential search.
+import java.util.Arrays;
+ 
+class GFG
+{
+    // Returns position of
+    // first occurrence of
+    // x in array
+    static int exponentialSearch(int arr[],
+                                 int n, int x)
+    {
+        // If x is present at first location itself
+        if (arr[0] == x)
+            return 0;
+     
+        // Find range for binary search by
+        // repeated doubling
+        int i = 1;
+        while (i < n && arr[i] <= x)
+            i = i*2;
+     
+        // Call binary search for the found range.
+        return Arrays.binarySearch(arr, i/2,
+                              Math.min(i, n-1), x);
+    }
+     
+    // Driver code
+    public static void main(String args[])
+    {
+        int arr[] = {2, 3, 4, 10, 40};
+        int x = 10;
+        int result = exponentialSearch(arr,
+                                  arr.length, x);
+         
+        System.out.println((result < 0) ?
+          "Element is not present in array" :
+          "Element is present at index " +
+                             result);
+    }
+}                           
+                            
+                            
+    
+                        </code>
+                        <a href="https://www.programiz.com/java-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--java language tab ends-->
+
+                <!--python language tab-->
+                    <input type="radio" id="tab3" name="mytabs" >
+                    <label for="tab3">Python</label>
+                <div class="tab">
+                    <pre>
+                        <code>
+Python program to find an element x
+# in a sorted array using Exponential Search
+                             
+# A recursive binary search function returns
+# location  of x in given array arr[l..r] is
+# present, otherwise -1
+def binarySearch( arr, l, r, x):
+    if r >= l:
+        mid = l + ( r-l ) // 2
+         
+        # If the element is present at
+        # the middle itself
+        if arr[mid] == x:
+            return mid
+         
+        # If the element is smaller than mid,
+        # then it can only be present in the
+        # left subarray
+        if arr[mid] > x:
+            return binarySearch(arr, l,
+                                mid - 1, x)
+         
+        # Else he element can only be
+        # present in the right
+        return binarySearch(arr, mid + 1, r, x)
+         
+    # We reach here if the element is not present
+    return -1
+ 
+# Returns the position of first
+# occurrence of x in array
+def exponentialSearch(arr, n, x):
+    # IF x is present at first
+    # location itself
+    if arr[0] == x:
+        return 0
+         
+    # Find range for binary search
+    # j by repeated doubling
+    i = 1
+    while i < n and arr[i] <= x:
+        i = i * 2
+     
+    # Call binary search for the found range
+    return binarySearch( arr, i // 2,
+                         min(i, n-1), x)
+     
+ 
+# Driver Code
+arr = [2, 3, 4, 10, 40]
+n = len(arr)
+x = 10
+result = exponentialSearch(arr, n, x)
+if result == -1:
+    print ("Element not found in the array")
+else:
+    print ("Element is present at index %d" %(result))                           
+                                
+                        </code>
+                        <a href="https://www.programiz.com/python-programming/online-compiler/"> Code </a>
+                    </pre>
+                </div>
+                <!--python langauge tab ends-->
+            </div>
+        </section>
+        <!--programs tabs ends -->
+
+        <!--output -->
+        <section class="output">
+            <h3>Sample Output</h3>
+            <div class="outputs">
+                <h4>Input:  arr[] = {10, 20, 40, 45, 55}
+                    x = 45</h4>
+                <code> Output: Element found at index 3 </code>
+              
+            </div>
+            
+        </section>
+        
+        <!--visualized not available-->
+
+        <!--video-->
+        <section class="video">
+            <div class="videos">
+                <iframe width="700px" height="600px" src="https://www.youtube.com/embed/L6AbpxsWJes"></iframe>
+            </div>
+        </section>
+
+        <!--next or previ-->
+        <section class="forward">
+            <div class="previ">
+                <a href="interpolation(4).html">previous</a>
+                <p>Interpolation Search</p>
+            </div>
+            <div class="next">
+                <a href="linearsearch(6).html">Next</a>
+                <p>Linear Search</p>
+            </div>
+        </section>
+        <script>
+
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+  
+              for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                  } else {
+                  dropdownContent.style.display = "block";
+                  }
+              });
+              }
+              </script>
+    </body>
+</html>
